@@ -17,10 +17,12 @@ class Category
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\NotBlank(message: 'Le champs nom est obligatoire')]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $image_path;
+    #[Assert\NotBlank(message: 'Le champs nom est obligatoire')]
+    private $imagePath;
 
     public function getId(): ?int
     {
@@ -41,12 +43,12 @@ class Category
 
     public function getImagePath(): ?string
     {
-        return $this->image_path;
+        return $this->imagePath;
     }
 
-    public function setImagePath(string $image_path): self
+    public function setImagePath(string $imagePath): self
     {
-        $this->image_path = $image_path;
+        $this->imagePath = $imagePath;
 
         return $this;
     }
