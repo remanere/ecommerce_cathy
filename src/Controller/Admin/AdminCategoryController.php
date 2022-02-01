@@ -43,8 +43,15 @@ class AdminCategoryController extends AbstractController
     }
 
     #[Route('/{id}', name: 'admin_category_show', methods: ['GET'])]
-    public function show(Category $category): Response
+    public function show(int $id,CategoryRepository $categoryRepository): Response
     {
+        $category = $categoryRepository->find($id);
+
+        if(!$category)
+        {
+            $this->addFlash("danger","Catégorie introuvable");
+            return $this->redirectToRoute("admin_category_index");
+        }
         return $this->render('admin/category/show.html.twig', [
             'category' => $category,
         ]);
