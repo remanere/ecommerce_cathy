@@ -24,6 +24,38 @@ class ProductController extends AbstractController
             'category' => $category
         ]);
     }
+    #[Route('boutique/produit/{id}', name: 'boutique_product_detail')]
+    public function detailProduct(int $id, ProductRepository $productRepository)
+    {
+    
+        $product = $productRepository->find($id);
+
+        if(!$product)
+        {
+            return $this->redirectToRoute("home");
+        }
+
+        $category = $product->getCategory();
+
+        $productsCategory = $category->getProducts();
+
+        $suggestedProducts = [];
+
+        foreach($productsCategory as $item)
+        {
+            if($item !== $product)
+            {
+                $suggestedProducts[] = $item;
+            }
+        }
+
+        $suggestedProducts = array_slice($suggestedProducts,0,4);
+
+        return $this->render("customer/product/detail_product.html.twig",[
+            'product' => $product,
+            'suggestedProducts' => $suggestedProducts
+        ]);
+    }
 
 }
 
