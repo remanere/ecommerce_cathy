@@ -4,9 +4,7 @@ namespace App\Controller;
 
 use App\Services\Cart\HandleCart;
 use App\Repository\ProductRepository;
-use App\Services\Cart\CartRealProduct;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 

@@ -9,6 +9,8 @@
                     <h3 class="text-center">Les produits du panier</h3>
                 </div>
                 {% include "_messages_flash.html.twig" %}
+                {% if detailProducts | length > 0 %}
+               
                 <div class="col-12 mb-3">
                     <table class="table">
                         <thead>
@@ -51,14 +53,21 @@
                                     <p><strong>{{ totalPrixPanier | priceEuro}}</strong></p>
                                 </th>
                             </tr>
-                            
-                        
                         </tbody>
                     </table>
                 </div>
                 <div class="col-12 d-flex justify-content-end">
                     <a href="{{ path('boutique_commande_recap') }}" class="btn btn-success">Valider le panier</a>
                 </div>
+                {% else %}
+
+                <p>Votre panier est vide</p>
+
+                <div class="col-12 d-flex">
+                    <a href="{{ path('home') }}" class="btn btn-secondary btn-lg btn-block">Voulez-vous retourner sur la page d'acceuil ?</a>
+                </div>
+
+                {% endif %} 
             </div>
         </div>
     </section>

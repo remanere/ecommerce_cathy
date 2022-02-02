@@ -23,7 +23,6 @@ class HomeController extends AbstractController
               8
           );
 
-      //Je les envoie dans la vue
       return $this->render('customer/home.html.twig',[
           'categories' => $categories,
           'products' => $products
