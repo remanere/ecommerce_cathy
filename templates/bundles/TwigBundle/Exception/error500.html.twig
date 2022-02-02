@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="row min-vh-100 bg-100">
+        <div class="col-6 d-none d-lg-block position-relative">
+            <!--/.bg-holder-->
+
+        </div>
+        <div class="col-sm-10 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+            <div class="row justify-content-center g-0">
+                <div class="col-lg-9 col-xl-8 col-xxl-6">
+                    <div class="card">
+                        <div class="card-header bg-circle-shape bg-shape text-center p-2"><a class="font-sans-serif fw-bolder fs-4 z-index-1 position-relative link-light light" href="#">
+                                </a></div>
+                        <div class="card-body p-4">
+                            <div class="row flex-between-center">
+                                <div class="col-auto">
+                                    <h3>  Erreur 500 - Erreur Serveur.</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-5 text-center text-muted">
+                                    {{ status_code }}
+                                </p>
+                                <p class="mb-5 text-center text-muted">
+                                    {{ status_text }}
+                                </p>
+                                <p class="mb-5 text-center text-muted">
+                                    {{ exception.message }}
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
