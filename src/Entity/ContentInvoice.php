@@ -24,7 +24,7 @@ class ContentInvoice
     private $priceProduct;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $iamgeProduct;
+    private $imageProduct;
 
     #[ORM\Column(type: 'integer')]
     private $quantity;
@@ -70,14 +70,14 @@ class ContentInvoice
         return $this;
     }
 
-    public function getIamgeProduct(): ?string
+    public function getImageProduct(): ?string
     {
-        return $this->iamgeProduct;
+        return $this->imageProduct;
     }
 
-    public function setIamgeProduct(string $iamgeProduct): self
+    public function setImageProduct(string $imageProduct): self
     {
-        $this->iamgeProduct = $iamgeProduct;
+        $this->imageProduct = $imageProduct;
 
         return $this;
     }
@@ -92,5 +92,10 @@ class ContentInvoice
         $this->quantity = $quantity;
 
         return $this;
+    }
+
+    public function getTotal()
+    {
+        return $this->getPriceProduct() * $this->getQuantity();
     }
 }

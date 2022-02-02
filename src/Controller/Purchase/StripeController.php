@@ -15,7 +15,7 @@ class StripeController extends AbstractController
     #[Route('/boutique/commande/stripe/session', name: 'boutique_stripe_session')]
     public function createSession(HandleCart $handleCart)
     {
-        Stripe::setApiKey('sk_test_51IBjOmJxItuCvN48kVDdR9Tg52Npf4IJydX0TFxyioJFxo5vdlObzoYYTmiVZ2BD2XqGQkvsWaj8UNNzEz3ekgMo00jPcW004c');
+        Stripe::setApiKey('sk_test_51KOf5zFKZt0Rk6joXz9eDumwu7AIYUqkTpAdYD50BBMpTLMKeNNNQ8V2i0Bt3zu0HrqswG9qTxksKfnz5qPCud9v00YE1FPlIH');
         
         $YOUR_DOMAIN = 'http://localhost:8000';
 
