@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class ProductType extends AbstractType
 {
@@ -29,12 +31,28 @@ class ProductType extends AbstractType
                 'divisor' => 100
             ])
             ->add('imagePath',TextType::class,[
+                'data_class' => null,
                 'label' => 'Image du produit',
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Ajouter le chemin de l\'image ici'
                 ]
+
             ])
+
+            ->add('image',FileType::class,[
+                'data_class' => null,
+                'label' => 'Ajouter une image',
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '3m',
+                        'maxSizeMessage' => 'Le fichier ne doit pas dépasser 3 Mo.',
+                    ]),
+                ]
+
+            ])
+            
             ->add('category',EntityType::class,[
                 'label' => 'Choisir la catégorie',
                 'placeholder' => '-- Choisir --',

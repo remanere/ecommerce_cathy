@@ -26,7 +26,7 @@ class AdminUserController extends AbstractController
 
         if(!$user)
         {
-            $this->addFlash("danger","L'utilisateur introuvable.");
+            $this->addFlash("danger","L'utilisateur est introuvable.");
             return $this->redirectToRoute("admin_user_list");
         }
 

@@ -39,23 +39,17 @@ class ProfileController extends AbstractController
             /** @var UploadedFile $file */
             $file = $form->get('image')->getData();
 
-            //Je vais d'abord récupérer le nom : 
             $originalFilename = pathinfo($file->getClientOriginalName(),PATHINFO_FILENAME);
 
-            //Je dois sluggifier le nom pour le rendre safe :
             $safeFileName = $slugger->slug($originalFilename);
 
-            //Je dois changer le nom pour le rendre unique
             $uniqFilename = $safeFileName . '-' .  md5(uniqid()) . '.' . $file->guessExtension();
 
-            //Je prend le file et je l envoie dans sa maison(/public/uploads/images)
             $file->move(
                 $this->getParameter('app_images_directory'),
                 $uniqFilename
             );
 
-            //J'enregistre le chemin qui me ramene vers ce fichier en bdd
-            //Je set le ImagePath (propriété de catégorie)
             $user->setImagePath('/uploads/images/' . $uniqFilename);
 
             $em->flush();

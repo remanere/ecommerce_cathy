@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/customer/category')]
 class CategoryController extends AbstractController
 {
-    #[Route('/', name: 'category_index', methods: ['GET'])]
+    #[Route('/', name: 'customer_category_index', methods: ['GET'])]
     public function index(CategoryRepository $categoryRepository): Response
     {
         return $this->render('customer/category/index.html.twig', [
@@ -18,7 +18,7 @@ class CategoryController extends AbstractController
         ]);
     }
 
-    #[Route('boutique/categorie/{id}', name: 'boutique_category_show_by_category')]
+    #[Route('boutique/categorie/{id}', name: 'boutique_category_show')]
     public function showProductByCategory(int $id, CategoryRepository $categoryRepository)
     {
         $category = $categoryRepository->find($id);
