@@ -9,12 +9,21 @@
     
         <div class="col-12 ">
             <a class="btn btn-dark" href="{{ path('profile_detail') }}">Revenir au profil</a>
+            <a class="btn btn-dark" href="{{ path('home') }}">Revenir à l'acceuil</a>
         </div>
 
         <div class="col-sm-12 mt-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Envoyer un email au support</h5>
+                    <h5 class="card-title">Merci de renseigner dans sujet : le produits que vous aimeriez personalisé et dans message ce que vous aimeriez qui soit personnalisé. 
+                    <br>
+                    Par exemple : 
+                    <br>
+                    si vous voulez un terrarium : le personnage, la taille, ... 
+                    <br>
+                    si c'est un tableau : le nom de l'enfant, l'animal et la couleur dominante.
+                    <br>
+                    Merci !</h5>
                 </div>
                 <div class="card-body">
                     {{ form_start(form) }}
