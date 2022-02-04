@@ -37,7 +37,6 @@ main {
   background-color: #fbdce2;
   transition: width 400ms ease;
   overflow: scroll;
-  z-index: 1000
 }
 
 .navbar-nav {
@@ -178,6 +177,7 @@ main {
     left: 0px;
   }
 }
+
 
 .imageCard
 {
