@@ -8,6 +8,8 @@
   --transition-speed: 600ms;
 }
 
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
 body {
   color: black;
   background-color: white;
@@ -157,6 +159,7 @@ main {
     top: 0;
     width: 5rem;
     height: 100vh;
+
   }
 
   .navbar:hover {
