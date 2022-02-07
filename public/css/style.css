@@ -8,11 +8,9 @@
   --transition-speed: 600ms;
 }
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
 body {
   color: black;
-  background-color: white;
+  background-color: #eab6a8 !important;
   margin: 0;
   padding: 0;
 }
@@ -39,6 +37,7 @@ main {
   background-color: #fbdce2;
   transition: width 400ms ease;
   overflow: scroll;
+  z-index: 1000;
 }
 
 .navbar-nav {
@@ -181,17 +180,10 @@ main {
   }
 }
 
-
 .imageCard
 {
   height: 300px;
   object-fit: cover;
-}
-
-.imageCarousel
-{
-    height: 500px;
-    object-fit: cover;
 }
 
 .imageDetailProduct
