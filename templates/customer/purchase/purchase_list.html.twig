@@ -9,7 +9,6 @@
                     <h3 class="text-center">Mes commandes</h3>
                 </div>
                 {% include "_messages_flash.html.twig" %}
-                 {% if purchases | length > 0 %}
                 <div class="col-12 mb-3">
                     <table class="table">
                         <thead>
@@ -21,7 +20,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
                             {% for item in purchases %}
                                 <tr>
                                     <th>
@@ -35,20 +33,12 @@
                                     <a href="{{ path('profile_purchase_show',{'id': item.id}) }}" class="btn btn-primary"><i class="fas fa-eye"></i> Consulter</a>
                                     </td>
                                 </tr>
+                            {% endfor %}
+                            
+                            
+                
                         </tbody>
                     </table>
-                                   {% endfor %}
-                            
-                {% else %}
-
-                                    <p>Vous n'avez pas de tickets de caisse pour le moment</p>
-
-                                         <div class="col-12 ">
-            <a class="btn btn-dark" href="{{ path('profile_detail') }}">Revenir au profil</a>
-            <a class="btn btn-dark" href="{{ path('home') }}">Revenir à l'acceuil</a>
-        </div>
-
-                {% endif %} 
                 </div>
             </div>
         </div>

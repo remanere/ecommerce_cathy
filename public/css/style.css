@@ -10,7 +10,7 @@
 
 body {
   color: black;
-  background-color: #eab6a8 !important;
+  background-color: #fbdce2;
   margin: 0;
   padding: 0;
 }
@@ -130,7 +130,6 @@ main {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    
   }
 
   .logo {
