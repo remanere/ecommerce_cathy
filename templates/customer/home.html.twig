@@ -11,13 +11,13 @@
 
           {% for category in categories %}
 
-              <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+              <div class="col-sm-12 col-lg-4 mt-3">
 
-                  <div class="card">
-                      <img src="{{ category.imagePath }}" class="card-img-top imageCard" alt="image_category">
-                      <div class="card-body">
+                 <div class="card bg-dark text-white">
+                      <img src="{{ category.imagePath }}" class="card-img" alt="image_category">
+                      <div class="card-img-overlay">
                           <h5 class="card-title">{{ category.name }}</h5>
-                          <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-primary w-100">Consulter</a>
+                          <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-outline-light">Consulter</a>
                       </div>
                   </div>
           
@@ -38,24 +38,26 @@
 
         {% for product in products %}
 
-            <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
-
-                <div class="card">
-                    <img src="{{ product.imagePath }}" class="card-img-top imageCard" alt="image_category">
-                    <div class="card-body">
+            <div class="col-sm-12 col-lg-4 mt-3">
+              
+             <div class="card bg-dark text-white">
+                    <img src="{{ product.imagePath }}" class="card-img" alt="image_category">
+                  <div class="card-img-overlay">
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p>{{ product.price | priceEuro }}</p>
-                        <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-primary w-100">Consulter</a>
+                        <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light btn-lg ">Consulter</a>
                     </div>
                 </div>
-        
             </div>
+              
             
         {% endfor %}
 
     </div>
      </div>
   </section>
+
+  
    
 
 
