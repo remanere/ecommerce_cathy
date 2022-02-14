@@ -13,6 +13,8 @@
             <h3>Liste des catégories</h3>
         </div>
 
+        <hr>
+
         {% for category in categories %}
 
             <div class="col-sm-12 col-md-6 col-lg-4">
@@ -29,11 +31,12 @@
             
         {% endfor %}
 
+        <hr> 
         
         <div class="col-sm-12 col-md-6">
-           <div class="card border-secondary mb-3" >
-                <div class="card-body text-secondary">
-                    <a href="{{ path('profile_contact_support') }}" class="btn btn-light w-100 mt-2">Pour toute commande personnelle, c'est ici !</a>
+            <div class="card border-dark mb-3" style="background-color: #f3eaea">
+                <div class="card-body">
+                    <a href="{{ path('profile_contact_support') }}" class="btn btn-lg btn-outline-dark w-100" >Pour toute commande personnelle, c'est ici !</a>
                 </div>
             </div>
         </div>

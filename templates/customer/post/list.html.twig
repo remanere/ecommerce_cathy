@@ -12,14 +12,14 @@
       
          {% for post in posts %}
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="#">
 
-                <div class="card">
+                  <div class="card border-dark mb-3" style="background-color: #f3eaea">
                     <img src="{{ post.imagePath }}" class="card-img-top imageCard" alt="image_category">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         {{ post.content | raw}}
-                        <a href="{{ path('blog_post_show',{'id': post.id }) }}" class="btn btn-primary w-100">Consulter</a>
+                        <a href="{{ path('blog_post_show',{'id': post.id }) }}" class="btn btn-lg btn-outline-dark w-100">Consulter</a>
                     </div>
                 </div>
         
