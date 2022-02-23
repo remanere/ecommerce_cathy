@@ -21,7 +21,6 @@
                     <img src="{{ product.imagePath }}" class="card-img imageCard" alt="image_category">
                     <div class="card-img-overlay">
                         <h5 class="card-title">{{ product.name }}</h5>
-                        <p>{{ product.price | priceEuro }}</p>
                         <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light w-100">Consulter</a>
                     </div>
                 </div>

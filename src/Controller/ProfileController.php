@@ -120,7 +120,7 @@ class ProfileController extends AbstractController
             ]);
     }
 
-    #[Route('/profile/contactsupport', name: 'profile_contact_support')]
+    #[Route('/profile/contact_support', name: 'profile_contact_support')]
     public function contactSupport(SendPreparedMail $sendPreparedMail,Request $request)
     {
         $form = $this->createForm(ContactSupportType::class);

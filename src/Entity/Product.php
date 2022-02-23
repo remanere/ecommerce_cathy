@@ -22,6 +22,9 @@ class Product
     #[ORM\Column(type: 'string', length: 255, nullable:true)]
     private $imagePath;
 
+    #[ORM\Column(type: 'text')]
+    private $contenu;
+
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
     private $category;
@@ -63,6 +66,18 @@ class Product
     public function setImagePath(string $imagePath): self
     {
         $this->imagePath = $imagePath;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
+    {
+        return $this->contenu;
+    }
+
+    public function setContenu(string $contenu): self
+    {
+        $this->contenu = $contenu;
 
         return $this;
     }

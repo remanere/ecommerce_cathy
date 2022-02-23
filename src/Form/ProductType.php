@@ -36,6 +36,14 @@ class ProductType extends AbstractType
                 ]
 
             ])
+
+            ->add('contenu',TextType::class,[
+                'label' => 'Description',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ecrire la description ici'
+                ]
+            ])
             
             ->add('category',EntityType::class,[
                 'label' => 'Choisir la catégorie',
