@@ -20,12 +20,14 @@ class HomeController extends AbstractController
               [
                   'id' => 'DESC'
               ],
-              8
+              50
           );
 
       return $this->render('customer/home.html.twig',[
           'categories' => $categories,
           'products' => $products
       ]);
+
+      
   }
 }

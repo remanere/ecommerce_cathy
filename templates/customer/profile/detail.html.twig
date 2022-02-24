@@ -8,17 +8,7 @@
      {% include "_messages_flash.html.twig" %}
         <div class="col-sm-12 col-md-6">
             <a href="{{ path('profile_image_edit') }}">
-            <div class="card border-dark mb-3" style="background-color: #f3eaea">
-    
-                <img 
-                {% if  (app.user.imagePath is same as null) or (app.user.imagePath is same as "") %}
-                    src="..."         
-                {% else %}
-                 src="{{ app.user.imagePath }}"      
-             {% endif %}
-                
-                class="card-img-top imageCard" alt="image_category">
-            </div>
+            
             </a>
         <div class="card border-dark mb-3" style="background-color: #f3eaea">
                 <div class="card-header">
@@ -37,9 +27,7 @@
                     <h5>Configuration</h5>
                 </div>
                 <div class="card-body">
-                    <a href="{{ path('profile_purchase_list')  }}" class="btn btn-lg btn-outline-dark w-100" >Mes tickets de caisse</a>
-                    <a href="{{ path('profile_image_edit') }}" class="btn btn-lg btn-outline-dark w-100" >Modifier ma photo de profil</a>
-                    <a href="{{ path('profile_edit_password') }}" class="btn btn-lg btn-outline-dark w-100" >Changer mon mot de passe</a>
+           
                 </div>
             </div>
                    <div class="col-12 ">
