@@ -1,5 +1,6 @@
 body {
   background-color: #f3eaea;
+  
 }
 
 .logo {
@@ -16,6 +17,10 @@ body {
 {
     height: 600px;
     object-fit: cover;
+}
+
+.bouton{
+  position: fixed;
 }
 
 

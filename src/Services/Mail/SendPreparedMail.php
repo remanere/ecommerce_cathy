@@ -17,8 +17,8 @@ class SendPreparedMail
     public function sendMailToSupport(string $email,string $contentMessage, string $subjectMessage)
     {
         $email = (new TemplatedEmail())
-            ->from('noreply@monsite.com')
-            ->to('support@monsite.com')
+            ->from('noreply@amelie_factory.fr')
+            ->to('support@amelie_factory.fr')
             ->subject($subjectMessage)
             ->htmlTemplate('email/support.html.twig')
             ->context([
