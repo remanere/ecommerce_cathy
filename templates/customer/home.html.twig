@@ -8,9 +8,9 @@
         <div class="col-12">
           <h1 class="text-center">Produits Amélie Factory</h1>
         </div>  
-          <div class="card bg-light text-dark">
+          <div class="bg-light text-dark">
           <a id="haut"></a>
-          <h2 class="card-title text-center"> Pour toute commande personnalisée : </h2>
+          <h2 class="title text-center"> Pour toute commande personnalisée : </h2>
           <p></p>
           <p>Merci de passer par mail et de renseigner dans <strong> sujet </strong> : le produit que vous aimeriez personaliser et dans le <strong> corps du message </strong> ce que vous aimeriez qui soit personnalisé. 
           <br>
@@ -20,8 +20,9 @@
                     <br>
                     - si vous voulez un terrarium : le personnage, la taille, ... 
                     <br>
-                    - si c'est un tableau : le nom de l'enfant, l'animal et la couleur dominante.
+                    - si c'est un cadre : le nom de l'enfant, l'animal et la couleur dominante.
                     <br>
+                    <p><strong>Il est possible sinon d'acheter un produit déjà fini (en photo). Pour cela, de la même façon, merci de passer par mail et d'indiquer le nom du produit et la quantitée que vous voulez.</strong></p>
                     <br>
                     Merci !
                     <br>
@@ -32,20 +33,17 @@
 
         {% for product in products %}
 
-            <div class="col-sm-12 col-lg-4 mt-3">
-          
-             <div class="card bg-dark text-dark text-center">
-                    <img src="{{ product.imagePath }}" class="card-img" alt="image_category">
-                  <div class="card-img-overlay">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light btn-lg">Consulter</a>
-                    </div>
-                    
-                </div>
-                         
+          <div class="col-sm-12 col-lg-3 mt-2">
+             <div class="card">
+              <img src="{{ product.imagePath }}" class="card-img imageCard" alt="image_category">
+              <div class="card-content">
+                <h2 class="card-title">{{ product.name }}</h2>
+                <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light btn-lg">Consulter</a>
+              </div>
             </div>
-          
+          </div>
         {% endfor %}
+        
     <div class="d-grid gap-2 d-md-flex justify-content-md-end fixed-bottom">
     <a href="#haut" class="btn btn-outline-dark btn-lg">haut de page</a>
 </div>
