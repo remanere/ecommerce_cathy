@@ -22,7 +22,7 @@ class PostController extends AbstractController
         ]);
 
         return $this->render("customer/post/list.html.twig",[
-            'posts' => $posts
+            'posts' => $postRepository->findAll(),
         ]);
     }
 
