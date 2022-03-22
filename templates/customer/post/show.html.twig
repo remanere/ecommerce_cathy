@@ -3,30 +3,66 @@
 {% block title %}Post index{% endblock %}
 
 {% block body %}
-  <div class="container py-5">
+   <section>
 
-    <div class="row">
-
-        {% include "_messages_flash.html.twig" %}
-    
-            <div class="col-sm-12 col-md-6 col-lg-6">
-
-                  <div class="card border-dark mb-3" style="background-color: #f3eaea">
-                    <img src="{{ post.imagePath }}" class="card-img-top imageCard" alt="image_category">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        {{ post.content | raw}}
-                       
-                    </div>
-                </div>
-        
-            </div>
-
-           
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="#" class="d-block w-100 imageCarousel" alt="...">
     </div>
-
-    
-
+    <div class="carousel-item">
+      <img src="#" class="d-block w-100 imageCarousel" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="#" class="d-block w-100 imageCarousel" alt="...">
+    </div>
     
   </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+      <div class="container py-5">
+      
+        <div class="row">
+     
+              {% include "_messages_flash.html.twig" %}
+
+            <div class="col-sm-12 col-md-12">
+
+                <div class="card border-dark mb-3">
+                   <div class="bg-dark">
+                    <img src="{{ post.imagePath }}" class="card-img" alt="image_category">
+                </div>
+                
+            </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="card border-dark mb-3" style="background-color: #f3eaea">
+                   <h5 class="card-title">{{ post.title }}</h5>
+          
+            <p class="text-dark">{{ post.content | raw }}</p>
+                 
+            </div>
+
+             <hr>
+                  <a class="btn btn-outline-dark" href="{{ path('home') }}">Revenir à l'accueil</a>
+</div>
+        </div>
+  
+
+  </section>
+
 {% endblock %}

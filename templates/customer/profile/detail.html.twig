@@ -10,6 +10,7 @@
             <a href="{{ path('profile_image_edit') }}">
             
             </a>
+            
         <div class="card border-dark mb-3" style="background-color: #f3eaea">
                 <div class="card-header">
                     <h5>Infos persos</h5>
@@ -26,26 +27,21 @@
                 <div class="card-header">
                     <h5>Configuration</h5>
                 </div>
+                    <div class="card-body">
+                    <a href="{{ path('profile_purchase_list')  }}" class="btn btn-outline-dark w-100">Mes commandes</a>
+                    <a href="{{ path('profile_edit_password') }}" class="btn btn-outline-dark w-100">Changer mon mot de passe</a>
+                     <a href="{{ path('profile_contact_support') }}" class="btn btn-outline-dark w-100">Pour toutes questions, ou pour une commande, c'est ici !</a>
+                </div>
                 <div class="card-body">
            
                 </div>
             </div>
                    <div class="col-12 ">
-            <a class="btn btn-dark w-100" href="{{ path('home') }}">Revenir à l'acceuil</a>
+            <a class="btn btn-dark w-100" href="{{ path('home') }}">Revenir à l'accueil</a>
         </div>
         </div>
 
-        <div class="col-sm-12 col-md-6">
-              <div class="card border-dark mb-3" style="background-color: #f3eaea">
-                <div class="card-header">
-                    <h5>Commande</h5>
-                </div>
-                <div class="card-body">
-                    <a href="{{ path('profile_contact_support') }}" class="btn btn-outline-dark w-100" >Pour toute commande personnelle, c'est ici !</a>
-                </div>
-            </div>
-
-        </div>
+     
 
     </div>
 

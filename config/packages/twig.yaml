@@ -4,6 +4,7 @@ twig:
     globals:
         # the value is the service's id
         categoryRepository: '@App\Repository\CategoryRepository'
+        postRepository: '@App\Repository\PostRepository'
 
 when@test:
     twig:

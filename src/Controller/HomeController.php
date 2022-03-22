@@ -22,7 +22,7 @@ class HomeController extends AbstractController
               [
                   'id' => 'DESC'
               ],
-              9999999
+              6
           );
 
  

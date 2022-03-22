@@ -1,6 +1,6 @@
 {% extends 'customer/base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Les catégories{% endblock %}
 
 {% block body %}
   <div class="container py-5">
@@ -27,7 +27,8 @@
                           <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-primary w-100">Consulter</a>
                       </div>
                   </div>
-          
+            <h5 class="card-title">{{ category.name }}</h5>
+                          <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-primary w-100">Consulter</a>
               </div>
               
           {% endfor %}

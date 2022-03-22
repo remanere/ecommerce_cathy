@@ -1,11 +1,31 @@
 body {
+
   background-color: #f3eaea;
-  
+  background: linear-gradient(70deg, #f3eaea, #f4e1e0);
+  font-family : freestyle script;
+  font-size: 40px;
+
 }
 
-.logo {
-  width: 10%;
+h3{
+     font-size: 40px;
 }
+
+h5{
+     font-size: 40px;
+}
+
+.btn{
+     font-size: 40px;
+}
+
+.card-img{
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  border-radius: 15px;
+
+}
+
 
 .imageCard
 {
@@ -13,9 +33,15 @@ body {
   object-fit: cover;
 }
 
-.imageDetailProduct
+.imageCarousel
 {
     height: 600px;
+    object-fit: cover;
+}
+
+.imageDetailProduct
+{
+    height: 500px;
     object-fit: cover;
 }
 
@@ -23,4 +49,227 @@ body {
   position: fixed;
 }
 
+*,
+*::before,
+*::after{
+ box-sizing: border-box;
+}
 
+.card{
+ color: var(--clr-neutral-100);
+ border-radius: 0.5rem;
+ overflow: hidden;
+ transition: transform 500ms ease;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+
+.card:hover,
+.card:focus-within {
+ transform: scale(1.05);
+}
+
+
+@media (hover){
+ .card-content{
+     transform: translateY(35%);
+     transition: transform 500ms ease;
+ }
+ .card:hover .card-content,
+ .card:focus-within .card-content {
+ transform: translateY(0);
+ transition-delay: 500ms ;
+}
+
+ .card:focus-within .card-content{
+ transition-duration: 0ms;
+}
+
+ .card-content > *:not(.card-title) {
+ opacity: 0;
+ transition: opacity 500ms linear;
+}
+
+.button:hover,
+.button:focus {
+ background-color: var(--clr-neutral-100);
+}
+
+@media (prefers-reduced-motion: reduce){
+ *,
+ *::before,
+ *::after{
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+     transition-delay: 0ms !important;
+ }
+}
+}
+
+:root {
+
+  --text-primary: black;
+  --text-secondary: black;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  background-color: #f3eaea;
+  background: linear-gradient(70deg, #f4e1e0, #f3eaea);
+  transition: width 400ms ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #fdf9fa;
+  color: black;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #e6949b;
+}
+
+.fa-secondary {
+  color: #eab6a8;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  letter-spacing: 0.3ch;
+  width: 100%;
+  clip-path: ellipse(33% 50%);
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+      
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+      
+    }
+  
+    main {
+      margin: 0;
+      
+    }
+  }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
    <div class="container py-5">
@@ -15,24 +15,21 @@
 
         <hr>
 
-        {% for category in categories %}
+   {% for category in categories %}
+     
+              <div class="col-sm-12 col-lg-4 mt-3">
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
-
-               <div class="card bg-dark text-white">
-                    <img src="{{ category.imagePath }}" class="card-img" alt="image_category">
-                        <div class="card-img-overlay">
-                        <h5 class="card-title">{{ category.name }}</h5>
-                        <a href="{{ path('boutique_category_show',{ 'id' : category.id } ) }}" class="btn btn-outline-light">Voir la catégorie </a>
-                    </div>
-                </div>
-        
-            </div>
-            
-        {% endfor %}
-
-        <hr> 
-        
+                 <div class="card bg-dark text-white">
+                      <img src="{{ category.imagePath }}" class="card-img" alt="image_category">
+                      <div class="card-img-overlay">
+                    
+                      </div>
+                  </div>
+                <h5 class="card-title">{{ category.name }}</h5>
+                          <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-outline-dark w-100">Consulter</a>
+              </div>
+              
+          {% endfor %}
     
 
 

@@ -18,7 +18,7 @@ class SendPreparedMail
     {
         $email = (new TemplatedEmail())
             ->from('noreply@amelie_factory.fr')
-            ->to('support@amelie_factory.fr')
+            ->to('ameliefactory75@gmail.com')
             ->subject($subjectMessage)
             ->htmlTemplate('email/support.html.twig')
             ->context([

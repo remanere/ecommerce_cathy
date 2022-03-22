@@ -2,61 +2,66 @@
 
 {% block body %}
 
+  <section class="bg">
+    <div class="container py-5">
+    <div class="row">
+
+          <a id="haut"></a>
+           <a class="btn btn-outline-dark" href="mailto:amelie.factory@outlook.fr">Pour toute commande, c'est ici</a>
+      
+          <div class="col-12">
+            <h3 class="text-center">Les nouveautés</h3>
+          </div>  
+          <hr>
+          
+                 {% for product in products %}
+
+            <div class="col-sm-12 col-lg-4 mt-3">
+              
+             <div class="card bg-dark text-white">
+                    <img src="{{ product.imagePath }}" class="card-img" alt="image_category">
+                  <div class="card-img-overlay">
+                
+                    </div>
+                </div>
+                   <h5 class="card-title">{{ product.name }}</h5>
+                        <p>{{ product.price | priceEuro }}</p>
+                        <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-dark btn-lg w-100">Consulter</a>
+            </div>
+              
+            
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
   <section>
   <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center">Produits Amélie Factory</h1>
+          <h3 class="text-center">Les catégories</h3>
         </div>  
-          <div class="card bg-light text-dark">
-          <a id="haut"></a>
-          <h2 class="card-title text-center"> Pour toute commande personnalisée : </h2>
-          <p></p>
-          <p>Merci de passer par mail et de renseigner dans <strong> sujet </strong> : le produit que vous aimeriez personaliser et dans le <strong> corps du message </strong> ce que vous aimeriez qui soit personnalisé. 
-          <br>
-                    <br>
-                    Par exemple : 
-                    <br>
-                    <br>
-                    - si vous voulez un terrarium : le personnage, la taille, ... 
-                    <br>
-                    - si c'est un tableau : le nom de l'enfant, l'animal et la couleur dominante.
-                    <br>
-                    <br>
-                    Merci !
-                    <br>
-                    <br>
-                     mail : <a href="mailto:amelie.factory@outlook.fr">amelie.factory@outlook.fr</a> </p>
-          </div>
         <hr>
 
-        {% for product in products %}
-
-            <div class="col-sm-12 col-lg-4 mt-3">
-          
-             <div class="card bg-dark text-dark text-center">
-                    <img src="{{ product.imagePath }}" class="card-img" alt="image_category">
-                  <div class="card-img-overlay">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light btn-lg">Consulter</a>
-                    </div>
-                    
-                </div>
-                         
-            </div>
-          
-        {% endfor %}
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end fixed-bottom">
-    <a href="#haut" class="btn btn-outline-dark btn-lg">haut de page</a>
-</div>
-      
-    </div>
-
-     </div>
+  {% for category in categories %}
      
+              <div class="col-sm-12 col-lg-4 mt-3">
+
+                 <div class="card bg-dark text-white">
+                      <img src="{{ category.imagePath }}" class="card-img" alt="image_category">
+                      <div class="card-img-overlay">
+                    
+                      </div>
+                  </div>
+                <h5 class="card-title">{{ category.name }}</h5>
+                          <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}" class="btn btn-outline-dark w-100">Consulter</a>
+              </div>
+              
+          {% endfor %}
+    </div>
+     </div>
   </section>
-
-
 
   
    
