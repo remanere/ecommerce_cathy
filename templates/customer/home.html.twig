@@ -42,9 +42,67 @@
         <div class="col-12">
           <h3 class="text-center">Les catégories</h3>
         </div>  
+<<<<<<< HEAD
         <hr>
 
   {% for category in categories %}
+=======
+          <div class="bg-light text-dark">
+          <a id="haut"></a>
+          <h2 class="title text-center"> Pour toute commande personnalisée : </h2>
+          <p></p>
+          <p>Merci de passer par mail et de renseigner dans <strong> sujet </strong> : le produit que vous aimeriez personaliser et dans le <strong> corps du message </strong> ce que vous aimeriez qui soit personnalisé. 
+          <br>
+                    <br>
+                    Par exemple : 
+                    <br>
+                    <br>
+                    - si vous voulez un terrarium : le personnage, la taille, ... 
+                    <br>
+                    - si c'est un cadre : le nom de l'enfant, l'animal et la couleur dominante.
+                    <br>
+                    <p><strong>Il est possible sinon d'acheter un produit déjà fini (en photo). Pour cela, de la même façon, merci de passer par mail et d'indiquer le nom du produit et la quantitée que vous voulez.</strong></p>
+                    <br>
+                    Merci !
+                    <br>
+                    <br>
+                     mail : <a href="mailto:amelie.factory@outlook.fr">amelie.factory@outlook.fr</a> </p>
+          </div>
+        <hr>
+
+  <section class="profile-area">
+    <div class="container py-5">
+    <div class="row">
+      <h2></h2>
+
+          {% for category in categories %}
+
+         <div class="col-sm-12 col-lg-4 mt-3">
+                     <div class="card">
+                         <div class="img1"><img src="{{ category.imagePath }}" class="card-img img1" alt="image_category"></div>
+                        <div class="main-text">
+                              <h5 class="card-title">{{ category.name }}</h5>
+                              <a href="{{ path('boutique_product_show_by_category',{'id': category.id}) }}"  class="btn btn-outline-dark">Consulter</a>
+                           </div>  
+                     </div>
+                 </div>
+              
+              
+          {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+        
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end fixed-bottom">
+    <a href="#haut" class="btn btn-outline-dark btn-lg">haut de page</a>
+</div>
+      
+    </div>
+
+     </div>
+>>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
      
               <div class="col-sm-12 col-lg-4 mt-3">
 
