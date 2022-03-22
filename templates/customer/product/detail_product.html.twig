@@ -12,11 +12,7 @@
 
                 <div class="">
                    <div class="bg-dark">
-<<<<<<< HEAD
                     <img src="{{ product.imagePath }}" class="card-img image_category" alt="image_category">
-=======
-                    <img src="{{ product.imagePath }}" class="card-img imageDetailProduct" alt="image_category">
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
                 </div>
                 
             </div>
@@ -29,7 +25,6 @@
             <p>{{ product.contenu }}</p>
             <hr>
                   <a class="btn btn-outline-dark" href="{{ path('home') }}">Revenir à l'accueil</a>
-<<<<<<< HEAD
               
               <hr>
                     <a href="{{ path('customer_category_index') }}" class="btn btn-outline-dark">Retour aux catégories</a>
@@ -38,13 +33,6 @@
               <a class="btn btn-outline-dark" href="mailto:amelie.factory@outlook.fr">Pour toute commande, c'est ici</a>
                
               
-=======
-                 <hr>
-            
-              <a class="btn btn-outline-dark" href="mailto:amelie.factory@outlook.fr">Pour toute commande, c'est ici</a>
-               
-                
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
             </div>
 
         </div>
@@ -63,7 +51,6 @@
 
             {% for product in suggestedProducts %}
 
-<<<<<<< HEAD
            <div class="col-sm-12 col-lg-4 mt-3">
               
              <div class="card bg-dark text-white">
@@ -77,17 +64,6 @@
                         <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-dark btn-lg w-100">Consulter</a>
             </div>
               
-=======
-             <div class="col-sm-12 col-lg-3 mt-2">
-             <div class="card">
-              <img src="{{ product.imagePath }}" class="card-img imageCard" alt="image_category">
-              <div class="card-content">
-                <h2 class="card-title">{{ product.name }}</h2>
-                <a href="{{ path('boutique_product_detail',{'id': product.id} ) }}" class="btn btn-outline-light btn-lg">Consulter</a>
-              </div>
-            </div>
-          </div>
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
           
             {% endfor %}
 

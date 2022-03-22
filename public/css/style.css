@@ -1,17 +1,10 @@
 body {
 
   background-color: #f3eaea;
-<<<<<<< HEAD
   background: linear-gradient(70deg, #f3eaea, #f4e1e0);
   font-family : freestyle script;
   font-size: 40px;
 
-=======
-}
-
-p {
-  color: black;
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
 }
 
 h3{
@@ -62,37 +55,17 @@ h5{
  box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
-:root{
-  --clr-neutral-900: hsl(207, 19%, 9%);
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-accent-400: hsl(142, 90%, 61%);
-}
-
-*,
-*::before,
-*::after{
- box-sizing: border-box;
-}
-
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
 .card{
  color: var(--clr-neutral-100);
  border-radius: 0.5rem;
  overflow: hidden;
  transition: transform 500ms ease;
-<<<<<<< HEAD
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
   overflow: hidden;
   border-radius: 15px;
 }
 
 
-=======
-}
-
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
 .card:hover,
 .card:focus-within {
  transform: scale(1.05);
@@ -138,12 +111,7 @@ h5{
 }
 
 :root {
-<<<<<<< HEAD
 
-=======
-  font-size: 16px;
-  font-family: 'Open Sans';
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
   --text-primary: black;
   --text-secondary: black;
   --bg-primary: #23232e;
@@ -151,16 +119,6 @@ h5{
   --transition-speed: 600ms;
 }
 
-<<<<<<< HEAD
-=======
-body {
-  color: black;
-  background-color: #f3eaea;
-  margin: 0;
-  padding: 0;
-}
-
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
 main {
   margin-left: 5rem;
   padding: 1rem;
@@ -169,10 +127,7 @@ main {
 .navbar {
   position: fixed;
   background-color: #f3eaea;
-<<<<<<< HEAD
   background: linear-gradient(70deg, #f4e1e0, #f3eaea);
-=======
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
   transition: width 400ms ease;
   overflow: hidden;
   z-index: 1000;
@@ -240,15 +195,9 @@ main {
   text-align: left;
   color: var(--text-secondary);
   background: var(--bg-secondary);
-<<<<<<< HEAD
   letter-spacing: 0.3ch;
   width: 100%;
   clip-path: ellipse(33% 50%);
-=======
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
 }
 
 .logo svg {
@@ -295,7 +244,6 @@ main {
     left: 0px;
   }
 }
-<<<<<<< HEAD
 
   
   /* Small screens */
@@ -325,5 +273,3 @@ main {
       
     }
   }
-=======
->>>>>>> 64ad6fc221e51f09c92e26c26af75b6b7c4766f8
